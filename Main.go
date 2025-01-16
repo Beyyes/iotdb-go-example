@@ -1,4 +1,4 @@
-package iotdb_go_example
+package main
 
 import (
 	"fmt"
@@ -16,7 +16,7 @@ func main() {
 		UserName: "root",
 		Password: "root",
 	}
-	session := client.NewSession(config)
+	session = client.NewSession(config)
 	if err := session.Open(false, 0); err != nil {
 		log.Fatal(err)
 	}
